@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+<style>
+    *{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F2F2F2;
+}
+.calculator{
+    height: 90%;
+    width: 30%;
+    background-color:white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px #C9C9C9;
+    position: relative;
+   
+}
+.box{
+    width:80%;
+    height: 80px;
+    background-color: #F2F2F2;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px 3px #C9C9C9;
+    margin-left: 40px;
+    display: flex;
+    overflow: hidden;
+}
+.row1{
+    height: 50px;
+    width: 80%;
+    margin-bottom: 30px;
+    margin-top: 80px;
+    margin-left: 40px;
+    display: flex;
+    font-weight: 100;
+}
+.row2{
+    height: 50px;
+    width: 80%;
+    margin-bottom: 30px;
+    margin-left: 40px;
+    display: flex;
+}
+.row3{
+    height: 50px;
+    width: 80%;
+    margin-bottom: 30px;
+    margin-left: 40px;
+    display: flex;
+}
+.row4{
+    height: 50px;
+    width: 80%;
+    margin-bottom: 30px;
+    margin-left: 40px;
+    display: flex;
+}
+#one{
+    height: 60px;
+    width: 60px;
+    border-radius: 9px;
+    margin: auto;
+    border:none;
+    font-weight:600;
+    font-size: 40px;
+    padding-left: 2px;
+    padding-top: 5px;
+    transition: background-color 1s;
+    
+
+
+}
+#second{
+    height: 60px;
+    width: 60px;
+    border-radius: 9px;
+    margin: auto;
+    border:none;
+    font-weight:600;
+    font-size: 40px;
+    padding-left: 2px;
+    padding-top: 5px;
+
+}
+#third{
+    height: 60px;
+    width: 60px;
+    border-radius: 9px;
+    margin: auto;
+    border:none;
+    font-weight:600;
+    font-size: 40px;
+    padding-left: 2px;
+    padding-top: 5px;
+
+}
+#four{
+    height: 60px;
+    width: 60px;
+    border-radius: 9px;
+    margin: auto;
+    border:none;
+    font-weight:600;
+    font-size: 40px;
+    padding-left: 2px;
+    padding-top: 5px;
+
+}
+#one:hover,#second:hover,#third:hover,#four:hover{
+    background-color:#32bb96;
+    transition: background-color 1s;
+}
+.d1{
+    background-color: #4678AD;
+}
+.a4,.b4,.c4,.d4,.d3{
+    background-color: black;
+    color: white;
+}
+.box{
+    font-size:50px;
+    padding-top: 20px;
+    padding-left:10px ;
+}
+
+
+@media only screen and (max-width: 480px){
+    .calculator{
+        height: 80%;
+        width: 90%;
+        background-color:white;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px 5px #C9C9C9;
+        position: relative;
+       
+    }
+    .box{
+    width:80%;
+    height: 80px;
+    background-color: #F2F2F2;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px 3px #C9C9C9;
+    margin-left: 30px;
+    display: flex;
+    overflow: hidden;
+}
+    .row1{
+        margin-left: 30px;
+    }
+    .row2{
+        margin-left: 30px;
+    }
+    .row3{
+        margin-left: 30px;
+    }
+    .row4{
+        margin-left: 30px;
+    }
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="box" id="ll" value='5'>0</div>
+            <div class="row1" >
+                <button id="one" onclick="mohan(1)">7</button>
+                <button class="a2" id="one" onclick="mohan(8)">8</button>
+                <button class="a3" id="one" onclick="mohan(9)">9</button>
+                <button class="a4" id="one" onclick="mohan('+')">+</button>
+            </div>
+            <div class="row2">
+                <button class="b1" id="second" onclick="mohan(4)">4</button>
+                <button class="b2" id="second" onclick="mohan(5)">5</button>
+                <button class="b3" id="second" onclick="mohan(6)">6</button>
+                <button class="b4" id="second" onclick="mohan('-')">-</button>
+            </div>
+            <div class="row3">
+                <button class="c1" id="third" onclick="mohan(1)">1</button>
+                <button class="c2" id="third" onclick="mohan(2)">2</button>
+                <button class="c3" id="third" onclick="mohan(3)">3</button>
+                <button class="c4" id="third" onclick="mohan('*')">*</button>
+            </div>
+            <div class="row4">
+                <button class="d1" id="four" onclick="mohanc()">C</button>
+                <button class="d2" id="four" onclick="mohan(0)">0</button>
+                <button class="d3" id="four" onclick="mohane()">=</button>
+                <button class="d4" id="four" onclick="mohan('/')">/</button>
+            </div>
+        </div>
+    </div>
+
+<script>
+    var a=document.getElementById('one');
+    var b=document.getElementById('second');
+    var c=document.getElementById('third');
+    var d=document.getElementById('four');
+    var e=document.getElementById('ll');
+    var h='';
+    function mohan(k){
+        h+=k;
+        e.innerHTML=h;
+        
+    }
+    function mohanc(){
+        e.innerHTML='';
+        h='';
+    }
+    function mohane(){
+        e.innerHTML=eval(h);
+        h='';
+
+    }
+</script>
+</body>
+</html>
